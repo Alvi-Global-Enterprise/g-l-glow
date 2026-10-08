@@ -1,0 +1,15 @@
+export const images = {
+  hero: "/images/hero/hero.png",
+  logo: "/images/hero/logo.png",
+  aboutWoman: "/images/about-woman.png",
+  aboutPerfume: "/images/about-perfume.png",
+  categorySkincare: "/images/category-skincare.png",
+  categoryFragrance: "/images/category-fragrance.png",
+  categoryBeauty: "/images/category-beauty.png",
+  bestsellerFeatured: "/images/bestseller-featured.png",
+  productSerum: "/images/product-serum.png",
+  productPerfume: "/images/product-perfume.png",
+  productLipstick: "/images/product-lipstick.png",
+  contactBg: "/images/contact-bg.png",
+  footerLogo: "/images/footer-logo.png",
+} as const;
