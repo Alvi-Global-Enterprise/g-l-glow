@@ -194,7 +194,7 @@ export default function CheckoutPage() {
             className="flex items-center transition-transform hover:scale-105"
           >
             <Image
-              src="/images/logo.png"
+              src="/images/footer-logo.png"
               alt="G&L Glow"
               width={140}
               height={45}
