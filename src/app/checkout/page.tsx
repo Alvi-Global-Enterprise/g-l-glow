@@ -252,7 +252,7 @@ export default function CheckoutPage() {
                 <span className="block text-center font-[family-name:var(--font-questrial)] text-xs font-semibold tracking-[0.2em] text-black/60 uppercase">
                   Express Checkout
                 </span>
-                <div className="mt-4 grid grid-cols-3 gap-3">
+                <div className="mt-4 grid grid-cols-1 sm:grid-cols-3 gap-2.5 sm:gap-3">
                   <button
                     type="button"
                     onClick={() => {
@@ -395,7 +395,7 @@ export default function CheckoutPage() {
                     </select>
                   </div>
 
-                  <div className="grid grid-cols-2 gap-4">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
                     <div>
                       <label className="block font-[family-name:var(--font-questrial)] text-xs font-semibold tracking-wider text-black/70 uppercase">
                         First Name *

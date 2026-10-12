@@ -29,25 +29,25 @@ export function BestSellers() {
   return (
     <section
       id="bestsellers"
-      className="bestsellers-section relative mx-auto w-full max-w-[1920px] overflow-hidden rounded-[40px] bg-[#F7EFE5] px-6 py-14 md:rounded-[60px] md:px-10 md:py-20 lg:rounded-[75px] xl:px-[126px] xl:py-[63px]"
+      className="bestsellers-section relative mx-auto w-full max-w-[1920px] overflow-hidden rounded-[32px] sm:rounded-[48px] md:rounded-[60px] lg:rounded-[75px] bg-[#F7EFE5] px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20 2xl:px-[126px] py-12 sm:py-16 md:py-20 xl:py-[63px]"
     >
       {/* ========================================================
           TOP HEADER: Left Gold Line + PRODUCTS THAT ARE AMONG + Right Gold Line
          ======================================================== */}
-      <div className="mx-auto flex max-w-[1668px] items-center justify-center gap-4 sm:gap-6 md:gap-8">
+      <div className="mx-auto flex max-w-[1668px] items-center justify-center gap-3 sm:gap-6 md:gap-8">
         <span className="h-[2px] min-w-0 flex-1 bg-[#FFC475]" />
-        <p className="shrink-0 font-[family-name:var(--font-questrial)] text-xs uppercase tracking-[0.07em] text-black/50 sm:text-base md:text-xl lg:text-[24px] lg:leading-[25px]">
+        <p className="shrink-0 font-[family-name:var(--font-questrial)] text-[11px] xs:text-xs sm:text-base md:text-xl lg:text-[24px] uppercase tracking-[0.07em] text-black/50">
           PRODUCTS THAT ARE AMONG
         </p>
         <span className="h-[2px] min-w-0 flex-1 bg-[#FFC475]" />
       </div>
 
       {/* Headline & Subtitle */}
-      <div className="mt-7 text-center md:mt-10">
-        <h2 className="font-[family-name:var(--font-display)] text-[44px] font-normal leading-[0.95] text-black sm:text-[60px] md:text-[72px] lg:text-[80px] lg:leading-[76px]">
+      <div className="mt-6 sm:mt-8 md:mt-10 text-center">
+        <h2 className="font-[family-name:var(--font-display)] text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[80px] font-normal leading-[0.96] text-black">
           Our <span className="italic text-[#C69B61]">Best Sellers</span>
         </h2>
-        <p className="mx-auto mt-4 max-w-[810px] font-[family-name:var(--font-questrial)] text-base leading-[1.536] tracking-[0.07em] text-black/50 sm:text-lg md:text-xl lg:text-[24px]">
+        <p className="mx-auto mt-3 sm:mt-4 max-w-[810px] px-2 font-[family-name:var(--font-questrial)] text-xs sm:text-base md:text-lg lg:text-xl xl:text-[24px] leading-relaxed text-black/50">
           Our most loved skincare, beauty &amp; fragrance essentials - carefully
           selected for your everyday glow.
         </p>
@@ -56,9 +56,9 @@ export function BestSellers() {
       {/* ========================================================
           MAIN CONTENT: Featured Card (Left) + Tabs & Product Cards (Right)
          ======================================================== */}
-      <div className="mt-10 grid items-start gap-8 lg:mt-12 lg:grid-cols-[1fr] xl:grid-cols-[783px_1fr] xl:gap-[23px]">
+      <div className="mt-8 sm:mt-10 md:mt-12 grid items-start gap-8 lg:grid-cols-12 xl:gap-8 2xl:gap-[28px]">
         {/* Left Column: Big Featured Card */}
-        <article className="bestseller-featured relative min-h-[520px] w-full overflow-hidden rounded-[21px] shadow-[0_12px_40px_rgba(0,0,0,0.06)] md:min-h-[660px] xl:h-[760px] xl:w-[783px]">
+        <article className="bestseller-featured relative w-full lg:col-span-12 xl:col-span-5 overflow-hidden rounded-[24px] shadow-[0_12px_40px_rgba(0,0,0,0.06)] min-h-[460px] sm:min-h-[560px] md:min-h-[640px] xl:h-[720px] 2xl:h-[760px]">
           <Image
             src={images.bestsellerFeatured}
             alt="Clearer, Healthier Glowing Skin"
@@ -68,35 +68,35 @@ export function BestSellers() {
             sizes="(max-width: 1280px) 100vw, 783px"
           />
           {/* Subtle dark gradient overlay for text readability */}
-          <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/25 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/35 to-transparent" />
 
           {/* Featured Content overlay */}
-          <div className="absolute inset-x-0 bottom-0 flex flex-col items-start p-7 sm:p-10 md:p-12 xl:bottom-[50px] xl:left-[44px] xl:p-0">
-            <span className="font-[family-name:var(--font-questrial)] text-sm tracking-[0.46em] text-[#FFC475] sm:text-base md:text-[18px]">
+          <div className="absolute inset-x-0 bottom-0 flex flex-col items-start p-5 sm:p-8 md:p-10 xl:p-10 2xl:bottom-[50px] 2xl:left-[44px]">
+            <span className="font-[family-name:var(--font-questrial)] text-xs sm:text-sm md:text-[18px] tracking-[0.46em] text-[#FFC475]">
               SKINCARE
             </span>
 
-            <h3 className="mt-3 max-w-[320px] font-[family-name:var(--font-display)] text-[32px] font-normal leading-[1.05] text-white sm:text-[38px] md:text-[43px] md:leading-[45px]">
+            <h3 className="mt-2.5 sm:mt-3 max-w-[340px] font-[family-name:var(--font-display)] text-2xl sm:text-3xl md:text-[40px] md:leading-[44px] font-normal leading-[1.05] text-white">
               Clearer, Healthier Glowing Skin
             </h3>
 
-            <p className="mt-3.5 max-w-[280px] font-[family-name:var(--font-questrial)] text-sm leading-[1.31] tracking-[0.03em] text-white/70 sm:text-base md:text-[18px]">
+            <p className="mt-2.5 sm:mt-3.5 max-w-[320px] font-[family-name:var(--font-questrial)] text-xs sm:text-sm md:text-[17px] leading-relaxed tracking-[0.02em] text-white/75">
               A carefully selected skincare essential designed to support a
               fresh, healthy-looking glow and make your everyday routine feel
               effortless.
             </p>
 
-            {/* Divider line 125px */}
-            <div className="mt-4 h-px w-[125px] bg-[#9F9F9F]" />
+            {/* Divider line */}
+            <div className="mt-3.5 sm:mt-4 h-px w-[125px] bg-[#9F9F9F]" />
 
             {/* Price & Action Row */}
-            <div className="mt-3 flex items-center gap-5">
-              <p className="font-[family-name:var(--font-questrial)] text-[38px] tracking-[0.03em] text-[#FFC475] sm:text-[44px] md:text-[49px]">
+            <div className="mt-4 flex flex-wrap items-center gap-3 sm:gap-4 md:gap-5">
+              <p className="font-[family-name:var(--font-questrial)] text-3xl sm:text-4xl md:text-[46px] tracking-[0.03em] text-[#FFC475]">
                 $42
               </p>
               <Link
                 href="/products/serum"
-                className="rounded-full bg-white/90 px-5 py-2.5 font-[family-name:var(--font-questrial)] text-xs font-semibold tracking-widest uppercase text-black backdrop-blur-md transition-all hover:bg-[#FFC475] hover:text-black hover:scale-105"
+                className="rounded-full bg-white/90 px-4 py-2 sm:px-5 sm:py-2.5 font-[family-name:var(--font-questrial)] text-[11px] sm:text-xs font-semibold tracking-widest uppercase text-black backdrop-blur-md transition-all hover:bg-[#FFC475] hover:text-black hover:scale-105"
               >
                 View Ritual
               </Link>
@@ -113,7 +113,7 @@ export function BestSellers() {
                     volume: "50ml",
                   })
                 }
-                className="rounded-full bg-[#FFC475] px-5 py-2.5 font-[family-name:var(--font-questrial)] text-xs font-semibold tracking-widest uppercase text-black transition-all hover:bg-[#ffba61] hover:scale-105"
+                className="rounded-full bg-[#FFC475] px-4 py-2 sm:px-5 sm:py-2.5 font-[family-name:var(--font-questrial)] text-[11px] sm:text-xs font-semibold tracking-widest uppercase text-black transition-all hover:bg-[#ffba61] hover:scale-105"
               >
                 Add to Bag
               </button>
@@ -122,12 +122,12 @@ export function BestSellers() {
         </article>
 
         {/* Right Column: Tabs Header + Arrow Buttons + 3 Product Cards */}
-        <div className="flex flex-col">
+        <div className="flex flex-col lg:col-span-12 xl:col-span-7">
           {/* Tabs + Arrow Buttons Row */}
-          <div className="flex flex-wrap items-center justify-between gap-4 pb-4">
+          <div className="flex flex-wrap items-center justify-between gap-3 sm:gap-4 pb-3 sm:pb-4">
             {/* Category Tabs */}
             <div className="relative flex items-center">
-              <div className="flex items-center gap-7 sm:gap-10 md:gap-12">
+              <div className="flex items-center gap-5 sm:gap-8 md:gap-12">
                 {tabs.map((tab) => {
                   const isActive = activeTab === tab;
                   return (
@@ -135,10 +135,10 @@ export function BestSellers() {
                       key={tab}
                       type="button"
                       onClick={() => setActiveTab(tab)}
-                      className={`relative pb-3 font-[family-name:var(--font-questrial)] text-sm tracking-[0.07em] transition-colors md:text-[18px] ${
+                      className={`relative pb-2.5 sm:pb-3 font-[family-name:var(--font-questrial)] text-xs sm:text-sm md:text-[18px] tracking-[0.07em] transition-colors ${
                         isActive
                           ? "font-medium text-black"
-                          : "text-black/33 hover:text-black/60"
+                          : "text-black/40 hover:text-black/70"
                       }`}
                     >
                       {tab}
@@ -162,13 +162,13 @@ export function BestSellers() {
             </div>
 
             {/* Arrow Navigation Buttons */}
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-2 sm:gap-3">
               <motion.button
                 type="button"
                 aria-label="Previous Products"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="flex h-[48.5px] w-[57px] items-center justify-center rounded-[47px] border border-black bg-transparent transition-colors hover:bg-black/5"
+                className="flex h-[38px] w-[46px] sm:h-[48.5px] sm:w-[57px] items-center justify-center rounded-[47px] border border-black bg-transparent transition-colors hover:bg-black/5"
               >
                 <svg
                   width="15"
@@ -193,7 +193,7 @@ export function BestSellers() {
                 aria-label="Next Products"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="flex h-[48.5px] w-[57px] items-center justify-center rounded-[47px] bg-black transition-colors hover:bg-neutral-800"
+                className="flex h-[38px] w-[46px] sm:h-[48.5px] sm:w-[57px] items-center justify-center rounded-[47px] bg-black transition-colors hover:bg-neutral-800"
               >
                 <svg
                   width="15"
@@ -223,7 +223,7 @@ export function BestSellers() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -12 }}
               transition={{ duration: 0.35 }}
-              className="mt-4 grid gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:gap-[23px]"
+              className="mt-4 grid gap-4 sm:gap-5 grid-cols-1 xs:grid-cols-2 lg:grid-cols-3 xl:gap-[20px] 2xl:gap-[23px]"
             >
               {filtered.slice(0, 3).map((product) => (
                 <ProductCard key={product.id} product={product} />
@@ -257,39 +257,39 @@ function ProductCard({ product }: { product: ProductItem }) {
     <motion.article
       whileHover={{ y: -6 }}
       transition={{ type: "spring", stiffness: 280, damping: 22 }}
-      className="product-card group relative flex h-full w-full flex-col overflow-hidden rounded-[21px] bg-white shadow-[0_10px_30px_rgba(0,0,0,0.05)] sm:max-w-[285px] xl:h-[638px] xl:w-[267px]"
+      className="product-card group relative flex h-full w-full flex-col overflow-hidden rounded-[20px] bg-white shadow-[0_10px_30px_rgba(0,0,0,0.05)]"
     >
       {/* Product Image */}
       <Link
         href={`/products/${product.id}`}
-        className="relative block aspect-[267/494] w-full overflow-hidden rounded-[21px] bg-[#B3B2B2] xl:h-[494px]"
+        className="relative block aspect-[3/4] sm:aspect-[4/5] xl:aspect-[267/450] 2xl:aspect-[267/494] w-full overflow-hidden rounded-[20px] bg-[#B3B2B2]"
       >
         <Image
           src={product.image}
           alt={product.name}
           fill
           className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
-          sizes="(max-width: 768px) 100vw, 267px"
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
         />
         {product.badge && (
-          <span className="absolute left-3.5 top-3.5 rounded-full bg-black/80 px-3 py-1 font-[family-name:var(--font-questrial)] text-[10px] tracking-widest uppercase text-white backdrop-blur-md">
+          <span className="absolute left-3 top-3 sm:left-3.5 sm:top-3.5 rounded-full bg-black/80 px-2.5 py-0.5 sm:px-3 sm:py-1 font-[family-name:var(--font-questrial)] text-[9px] sm:text-[10px] tracking-widest uppercase text-white backdrop-blur-md">
             {product.badge}
           </span>
         )}
       </Link>
 
       {/* Product Information */}
-      <div className="flex flex-1 flex-col justify-between px-5 pb-5 pt-4">
+      <div className="flex flex-1 flex-col justify-between p-3.5 sm:p-4 md:p-5">
         {/* Title */}
         <Link href={`/products/${product.id}`}>
-          <h3 className="font-[family-name:var(--font-questrial)] text-[16px] uppercase tracking-[0.03em] text-black transition-colors hover:text-[#C69B61] md:text-[18px]">
+          <h3 className="line-clamp-1 font-[family-name:var(--font-questrial)] text-sm sm:text-base md:text-[18px] uppercase tracking-[0.03em] text-black transition-colors hover:text-[#C69B61]">
             {product.name}
           </h3>
         </Link>
 
         {/* Price & Cart Button Row */}
-        <div className="mt-3 flex items-center justify-between">
-          <p className="font-[family-name:var(--font-questrial)] text-[38px] tracking-[0.03em] text-black md:text-[49px]">
+        <div className="mt-3 flex items-center justify-between gap-2">
+          <p className="font-[family-name:var(--font-questrial)] text-2xl sm:text-3xl md:text-[38px] xl:text-[44px] tracking-[0.03em] text-black">
             {product.price}
           </p>
 
@@ -300,12 +300,12 @@ function ProductCard({ product }: { product: ProductItem }) {
             aria-label={`Add ${product.name} to cart`}
             whileHover={{ scale: 1.08 }}
             whileTap={{ scale: 0.94 }}
-            className="flex size-[52px] items-center justify-center rounded-full bg-[#FFC475] transition-colors duration-200 hover:bg-[#ffba61] shadow-sm md:size-[59px]"
+            className="flex size-10 sm:size-12 md:size-[52px] xl:size-[59px] shrink-0 items-center justify-center rounded-full bg-[#FFC475] transition-colors duration-200 hover:bg-[#ffba61] shadow-sm"
           >
             <svg
               viewBox="220 0 41 32"
               fill="none"
-              className="h-[21px] w-auto text-black"
+              className="h-4 sm:h-5 md:h-[21px] w-auto text-black"
               aria-hidden
             >
               <path

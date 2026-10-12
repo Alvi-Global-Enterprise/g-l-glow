@@ -9,7 +9,7 @@ export function Hero() {
     <div className="w-full bg-[#080503] ">
       <section
         id="home"
-        className="hero-section relative mx-auto flex w-full max-w-[1920px] flex-col items-center justify-between overflow-hidden rounded-[28px] sm:rounded-[36px] md:rounded-[48px] lg:h-[993px] lg:min-h-[993px] lg:rounded-[60px] shadow-[0_20px_60px_rgba(0,0,0,0.6)]"
+        className="hero-section relative mx-auto flex w-full max-w-[1920px] flex-col items-center justify-between overflow-hidden rounded-[24px] sm:rounded-[36px] md:rounded-[48px] lg:rounded-[60px] min-h-[580px] sm:min-h-[660px] md:min-h-[740px] lg:min-h-[840px] xl:min-h-[920px] xl:h-[993px] shadow-[0_20px_60px_rgba(0,0,0,0.6)]"
       >
         {/* Hero Background Image */}
         <div className="hero-bg pointer-events-none absolute inset-0 z-0 overflow-hidden">
@@ -29,13 +29,13 @@ export function Hero() {
         <Navbar />
 
         {/* Centered Hero Content */}
-        <div className="relative z-10 flex w-full flex-1 flex-col items-center justify-center px-6 pb-16 pt-32 text-center sm:pb-20 sm:pt-36 md:pt-40 lg:pb-24 lg:pt-[170px]">
+        <div className="relative z-10 flex w-full flex-1 flex-col items-center justify-center px-4 sm:px-6 md:px-8 pb-12 sm:pb-16 md:pb-20 pt-24 sm:pt-32 md:pt-40 lg:pb-24 lg:pt-[170px] text-center">
           {/* Eyebrow / Tagline */}
           <motion.p
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.15 }}
-            className="font-[family-name:var(--font-questrial)] text-xs tracking-[0.16em] text-[#EAD8C7]/80 sm:text-base sm:tracking-[0.18em] md:text-xl lg:text-[26px] lg:tracking-[0.2em]"
+            className="font-[family-name:var(--font-questrial)] text-[13px] xs:text-[16px] sm:text-[20px] md:text-[24px] lg:text-[28px] xl:text-[32px] leading-[33px] tracking-[0.03em] text-white/50"
           >
             BEAUTY · SKIN · FRAGRANCE
           </motion.p>
@@ -45,13 +45,13 @@ export function Hero() {
             initial={{ opacity: 0, y: 26 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.85, delay: 0.28, ease: [0.22, 1, 0.36, 1] }}
-            className="mt-3 font-[family-name:var(--font-display)] text-[52px] leading-[0.94] text-[#FFC475] sm:mt-4 sm:text-[76px] md:text-[98px] lg:mt-5 lg:text-[116px] xl:text-[124px] drop-shadow-[0_4px_30px_rgba(0,0,0,0.45)]"
+            className="mt-2 sm:mt-3 lg:mt-4 font-[family-name:var(--font-display)] text-[40px] xs:text-[50px] sm:text-[72px] md:text-[92px] lg:text-[110px] xl:text-[121px] leading-[0.943] text-[#FFC475] drop-shadow-[0_4px_30px_rgba(0,0,0,0.45)]"
           >
-            <span className="font-normal">Your</span>{" "}
-            <span className="font-normal italic">Glow,</span>
+            <span className="font-normal font-[family-name:var(--font-display)]">Your</span>{" "}
+            <span className="font-normal italic font-[family-name:var(--font-display)]">Glow,</span>
             <br />
-            <span className="font-normal">Your</span>{" "}
-            <span className="font-normal italic">Story.</span>
+            <span className="font-normal font-[family-name:var(--font-display)]">Your</span>{" "}
+            <span className="font-normal italic font-[family-name:var(--font-display)]">Story.</span>
           </motion.h1>
 
           {/* Description Paragraph */}
@@ -59,40 +59,41 @@ export function Hero() {
             initial={{ opacity: 0, y: 18 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.42 }}
-            className="mt-4 max-w-[640px] font-[family-name:var(--font-questrial)] text-sm leading-relaxed text-[#EAD8C7]/75 sm:mt-5 sm:text-base md:text-lg lg:mt-6 lg:text-[20px] lg:leading-[1.4]"
+            className="mt-3 sm:mt-4 lg:mt-5 max-w-[649px] px-2 font-[family-name:var(--font-questrial)] text-xs xs:text-sm sm:text-base md:text-[18px] lg:text-[20px] leading-[24px] text-white/50"
           >
             Discover carefully selected skincare, beauty and fragrance products
             designed to be part of your everyday ritual.
           </motion.p>
 
-          {/* Call To Action Buttons */}
+          {/* Call To Action Buttons (Figma Group 228: 524px x 48px, gap 21px) */}
           <motion.div
             initial={{ opacity: 0, y: 22 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.75, delay: 0.55 }}
-            className="mt-7 flex flex-wrap items-center justify-center gap-3.5 sm:mt-8 sm:gap-5 lg:mt-9"
+            className="mt-7 sm:mt-9 lg:mt-[34px] flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-[21px] w-full max-w-[524px]"
           >
-            {/* Primary CTA: SHOP NOW */}
+            {/* Primary CTA: SHOP NOW (Figma Group 227: 196.73px x 48px, #FFC475, circle #D9A96A) */}
             <a
               href="#bestsellers"
-              className="group inline-flex h-12 items-center rounded-full bg-[#E5AD6B] pl-6 pr-1.5 transition-all duration-300 hover:scale-[1.03] hover:bg-[#ebbb82] sm:h-[50px] sm:pl-7 shadow-[0_4px_24px_rgba(229,173,107,0.35)]"
+              className="group inline-flex h-[48px] w-full max-w-[197px] sm:w-[197px] items-center justify-between rounded-[24px] bg-[#FFC475] pl-[25px] pr-0 transition-all duration-300 hover:scale-[1.03] hover:brightness-105 shadow-[0_4px_24px_rgba(255,196,117,0.35)] cursor-pointer shrink-0"
             >
-              <span className="mr-3 font-[family-name:var(--font-questrial)] text-[16px] font-semibold tracking-wider text-black sm:text-[19px]">
+              <span className="font-[family-name:var(--font-questrial)] text-[18px] sm:text-[21px] font-normal leading-[22px] tracking-[0.01em] text-black select-none whitespace-nowrap">
                 SHOP NOW
               </span>
-              <span className="flex size-9 items-center justify-center rounded-full bg-[#D19B58] transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 sm:size-10">
+              <span className="flex size-[48px] shrink-0 items-center justify-center rounded-full bg-[#D9A96A] transition-transform duration-300 group-hover:scale-105">
                 <svg
-                  width="14"
-                  height="14"
-                  viewBox="0 0 14 14"
+                  width="15"
+                  height="10"
+                  viewBox="0 0 15 10"
                   fill="none"
-                  className="text-black"
-                  aria-hidden
+                  className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                  style={{ transform: "rotate(-30.36deg)" }}
+                  aria-hidden="true"
                 >
                   <path
-                    d="M3.5 10.5L10.5 3.5M10.5 3.5H5M10.5 3.5V9"
-                    stroke="currentColor"
-                    strokeWidth="2.3"
+                    d="M0.5 5H13.5M8.5 1L13.5 5L8.5 9"
+                    stroke="#000000"
+                    strokeWidth="2.5"
                     strokeLinecap="round"
                     strokeLinejoin="round"
                   />
@@ -100,27 +101,28 @@ export function Hero() {
               </span>
             </a>
 
-            {/* Secondary CTA: EXPLORE COLLECTION */}
+            {/* Secondary CTA: EXPLORE COLLECTION (Figma Group 226: 306px x 48px, rgba(255,196,117,0.2), circle #FFFFFF) */}
             <a
               href="#categories"
-              className="group inline-flex h-12 items-center rounded-full border border-[rgba(255,200,140,0.28)] bg-[rgba(39,25,15,0.75)] pl-6 pr-1.5 backdrop-blur-md transition-all duration-300 hover:scale-[1.03] hover:bg-[rgba(55,34,20,0.85)] sm:h-[50px] sm:pl-7 shadow-[0_4px_24px_rgba(0,0,0,0.4)]"
+              className="group inline-flex h-[48px] w-full max-w-[306px] sm:w-[306px] items-center justify-between rounded-[24px] bg-[rgba(255,196,117,0.2)] pl-[23px] pr-0 backdrop-blur-sm transition-all duration-300 hover:scale-[1.03] hover:bg-[rgba(255,196,117,0.3)] shadow-[0_4px_24px_rgba(255,196,117,0.2)] cursor-pointer shrink-0"
             >
-              <span className="mr-3 font-[family-name:var(--font-questrial)] text-[15px] font-medium tracking-wider text-[#F5EBE1] sm:text-[18px]">
+              <span className="font-[family-name:var(--font-questrial)] text-[18px] sm:text-[21px] font-normal leading-[22px] tracking-[0.01em] text-white select-none whitespace-nowrap">
                 EXPLORE COLLECTION
               </span>
-              <span className="flex size-9 items-center justify-center rounded-full bg-white transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 sm:size-10">
+              <span className="flex size-[48px] shrink-0 items-center justify-center rounded-full bg-white transition-transform duration-300 group-hover:scale-105">
                 <svg
-                  width="14"
-                  height="14"
-                  viewBox="0 0 14 14"
+                  width="15"
+                  height="10"
+                  viewBox="0 0 15 10"
                   fill="none"
-                  className="text-black"
-                  aria-hidden
+                  className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                  style={{ transform: "rotate(-30.36deg)" }}
+                  aria-hidden="true"
                 >
                   <path
-                    d="M3.5 10.5L10.5 3.5M10.5 3.5H5M10.5 3.5V9"
-                    stroke="currentColor"
-                    strokeWidth="2.3"
+                    d="M0.5 5H13.5M8.5 1L13.5 5L8.5 9"
+                    stroke="#000000"
+                    strokeWidth="2.5"
                     strokeLinecap="round"
                     strokeLinejoin="round"
                   />

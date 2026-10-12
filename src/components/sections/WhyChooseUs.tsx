@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 
-const features = [
+const features = [  
   {
     number: "01",
     title: "PREMIUM INGREDIENTS",
@@ -130,43 +130,43 @@ export function WhyChooseUs() {
   return (
     <section
       id="why-us"
-      className="why-section relative mx-auto w-full max-w-[1920px] px-6 py-14 md:px-10 md:py-20 xl:px-[134px] xl:pt-[65px] xl:pb-[80px]"
+      className="why-section relative mx-auto w-full max-w-[1920px] px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20 2xl:px-[134px] py-12 sm:py-16 md:py-20 xl:pt-[65px] xl:pb-[80px]"
     >
       {/* Top Header Bar: Dot + WHY G&L GLOW + Gold Line */}
-      <div className="mb-8 flex items-center gap-4 md:mb-12">
-        <span className="size-[10px] shrink-0 rounded-full bg-[#FFC475]" />
-        <span className="font-[family-name:var(--font-questrial)] text-lg uppercase tracking-[0.07em] text-black/50 sm:text-xl md:text-[24px] md:leading-[25px]">
+      <div className="mb-6 sm:mb-8 md:mb-12 flex items-center gap-3 sm:gap-4">
+        <span className="size-2 sm:size-2.5 shrink-0 rounded-full bg-[#FFC475]" />
+        <span className="font-[family-name:var(--font-questrial)] text-xs sm:text-base md:text-xl lg:text-[24px] uppercase tracking-[0.07em] text-black/50">
           WHY G&amp;L GLOW
         </span>
         <span className="h-[2px] min-w-0 flex-1 bg-[#FFC475]" />
       </div>
 
       {/* Main Grid: Left Column + Divider Line + Right 2x2 Feature Cards */}
-      <div className="grid items-start gap-10 lg:gap-8 xl:grid-cols-[695px_1px_1fr] xl:gap-0">
+      <div className="grid items-start gap-10 lg:gap-12 xl:grid-cols-12 xl:gap-8 2xl:gap-12">
         {/* Left Column: Heading, Paragraph, and Pill Button */}
-        <div className="flex flex-col items-start xl:pr-[48px]">
+        <div className="flex flex-col items-start xl:col-span-5">
           {/* Headline */}
-          <h2 className="font-[family-name:var(--font-display)] text-[44px] font-normal leading-[0.95] text-black sm:text-[60px] md:text-[72px] lg:text-[80px] lg:leading-[76px]">
+          <h2 className="font-[family-name:var(--font-display)] text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[80px] font-normal leading-[0.96] text-black">
             Why <span className="italic text-[#C69B61]">Choose Us?</span>
           </h2>
 
           {/* Paragraph Description */}
-          <p className="mt-6 max-w-[695px] font-[family-name:var(--font-questrial)] text-base leading-[1.536] tracking-[0.07em] text-black/50 sm:text-lg md:text-xl lg:text-[24px]">
+          <p className="mt-4 sm:mt-6 max-w-[695px] font-[family-name:var(--font-questrial)] text-xs sm:text-base md:text-lg lg:text-xl xl:text-[24px] leading-relaxed text-black/50">
             We believe beauty should be simple, thoughtful and personal. Our
             skincare, beauty and fragrance essentials are carefully selected to
             help you create a routine that feels right for you.
           </p>
 
           {/* CTA Button: Outline Pill with Golden Arrow Circle */}
-          <div className="mt-8 md:mt-10">
+          <div className="mt-6 sm:mt-8 md:mt-10 w-full">
             <a
               href="#about"
-              className="group inline-flex h-[48px] w-[312px] items-center justify-between rounded-[24px] border border-black bg-transparent pl-6 pr-0 transition-all duration-300 hover:scale-[1.02]"
+              className="group inline-flex h-12 sm:h-[48px] w-full max-w-[312px] items-center justify-between rounded-[24px] border border-black bg-transparent pl-5 sm:pl-6 pr-0 transition-all duration-300 hover:scale-[1.02]"
             >
-              <span className="font-[family-name:var(--font-questrial)] text-[18px] text-black/70 transition-colors group-hover:text-black md:text-[20px]">
+              <span className="font-[family-name:var(--font-questrial)] text-sm sm:text-[18px] md:text-[20px] text-black/70 transition-colors group-hover:text-black">
                 DISCOVER OUR STORY
               </span>
-              <span className="flex size-[48px] shrink-0 items-center justify-center rounded-full bg-[#D9A96A] transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5">
+              <span className="flex size-12 sm:size-[48px] shrink-0 items-center justify-center rounded-full bg-[#D9A96A] transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5">
                 <svg
                   width="15"
                   height="10"
@@ -188,40 +188,37 @@ export function WhyChooseUs() {
           </div>
         </div>
 
-        {/* Vertical Divider: Rectangle 130 (h: 308px, w: 1px, bg-black/14) */}
-        <div className="my-auto hidden h-[308px] w-px bg-black/14 xl:block" />
-
         {/* Right Column: 2x2 Feature Cards Grid */}
-        <div className="why-cards grid gap-5 sm:grid-cols-2 xl:gap-x-[26px] xl:gap-y-[20px] xl:pl-[48px]">
+        <div className="why-cards xl:col-span-7 xl:border-l xl:border-black/10 xl:pl-8 2xl:pl-12 grid gap-4 sm:gap-5 grid-cols-1 sm:grid-cols-2">
           {features.map((feature, index) => (
             <motion.article
               key={feature.number}
               custom={index}
               whileHover={{ y: -4, scale: 1.01 }}
               transition={{ type: "spring", stiffness: 280, damping: 20 }}
-              className="feature-card flex h-auto min-h-[133px] w-full items-center gap-4 rounded-[20px] bg-[#F7EFE5] p-4 sm:p-5 xl:h-[133px] xl:w-[380px]"
+              className="feature-card flex h-auto min-h-[120px] sm:min-h-[133px] w-full items-center gap-3.5 sm:gap-4 rounded-[20px] bg-[#F7EFE5] p-3.5 sm:p-5"
             >
               {/* Left Circle Group: Black Circle + White Number Badge + Gold SVG Icon */}
               <div className="relative shrink-0">
-                {/* Black Circle (83px) */}
-                <div className="flex size-[76px] items-center justify-center rounded-full bg-black sm:size-[83px]">
+                {/* Black Circle */}
+                <div className="flex size-[62px] sm:size-[74px] md:size-[83px] items-center justify-center rounded-full bg-black">
                   {feature.icon}
                 </div>
 
-                {/* Overlapping White Number Badge (33px) */}
-                <div className="absolute -left-1.5 -top-1.5 flex size-[31px] items-center justify-center rounded-full bg-white shadow-sm sm:size-[33px]">
-                  <span className="font-[family-name:var(--font-nav)] text-xs font-bold text-black sm:text-[14px]">
+                {/* Overlapping White Number Badge */}
+                <div className="absolute -left-1 -top-1 sm:-left-1.5 sm:-top-1.5 flex size-[26px] sm:size-[31px] md:size-[33px] items-center justify-center rounded-full bg-white shadow-sm">
+                  <span className="font-[family-name:var(--font-nav)] text-[11px] sm:text-xs md:text-[14px] font-bold text-black">
                     {feature.number}
                   </span>
                 </div>
               </div>
 
               {/* Right Content: Title + Description */}
-              <div className="flex flex-1 flex-col justify-center">
-                <h3 className="font-[family-name:var(--font-questrial)] text-[14px] uppercase tracking-[0.09em] text-black sm:text-[15px]">
+              <div className="flex flex-1 flex-col justify-center min-w-0">
+                <h3 className="font-[family-name:var(--font-questrial)] text-xs sm:text-[14px] md:text-[15px] uppercase tracking-[0.09em] text-black font-medium">
                   {feature.title}
                 </h3>
-                <p className="mt-1 font-[family-name:var(--font-questrial)] text-[13px] leading-[1.31] tracking-[0.01em] text-black/50 sm:text-[14px] md:text-[15px]">
+                <p className="mt-1 font-[family-name:var(--font-questrial)] text-[12px] sm:text-[13px] md:text-[14px] leading-relaxed tracking-[0.01em] text-black/60">
                   {feature.description}
                 </p>
               </div>

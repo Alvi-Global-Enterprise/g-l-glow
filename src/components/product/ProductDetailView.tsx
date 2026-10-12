@@ -304,7 +304,7 @@ export function ProductDetailView({ productId }: { productId: string }) {
                   </span>
                 </div>
 
-                <div className="grid grid-cols-3 gap-3">
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5 sm:gap-3">
                   {product.variants.map((v) => {
                     const isSelected = selectedVariant.label === v.label;
                     return (
@@ -312,7 +312,7 @@ export function ProductDetailView({ productId }: { productId: string }) {
                         key={v.label}
                         type="button"
                         onClick={() => setSelectedVariant(v)}
-                        className={`flex flex-col items-center justify-center rounded-2xl border p-3.5 transition-all ${
+                        className={`flex flex-col items-center justify-center rounded-2xl border p-3 sm:p-3.5 transition-all ${
                           isSelected
                             ? "border-black bg-black text-white shadow-lg"
                             : "border-black/15 bg-white text-black hover:border-black/40"
@@ -336,25 +336,25 @@ export function ProductDetailView({ productId }: { productId: string }) {
             )}
 
             {/* Quantity Stepper & Add to Bag Row */}
-            <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center">
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
               {/* Stepper Pill */}
-              <div className="flex h-[58px] items-center justify-between rounded-full border border-black/20 bg-white px-4 shadow-sm sm:w-[150px]">
+              <div className="flex h-[52px] sm:h-[58px] items-center justify-between rounded-full border border-black/20 bg-white px-4 shadow-sm w-full sm:w-[150px] shrink-0">
                 <button
                   type="button"
                   onClick={() => setQuantity((q) => Math.max(1, q - 1))}
                   aria-label="Decrease quantity"
-                  className="flex size-9 items-center justify-center rounded-full text-black/60 transition-colors hover:bg-black/5 hover:text-black"
+                  className="flex size-8 sm:size-9 items-center justify-center rounded-full text-black/60 transition-colors hover:bg-black/5 hover:text-black"
                 >
                   <Minus className="size-4" />
                 </button>
-                <span className="font-[family-name:var(--font-questrial)] text-lg font-semibold text-black">
+                <span className="font-[family-name:var(--font-questrial)] text-base sm:text-lg font-semibold text-black">
                   {quantity}
                 </span>
                 <button
                   type="button"
                   onClick={() => setQuantity((q) => q + 1)}
                   aria-label="Increase quantity"
-                  className="flex size-9 items-center justify-center rounded-full text-black/60 transition-colors hover:bg-black/5 hover:text-black"
+                  className="flex size-8 sm:size-9 items-center justify-center rounded-full text-black/60 transition-colors hover:bg-black/5 hover:text-black"
                 >
                   <Plus className="size-4" />
                 </button>
@@ -366,9 +366,9 @@ export function ProductDetailView({ productId }: { productId: string }) {
                 onClick={handleAddToCart}
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                className="flex h-[58px] flex-1 items-center justify-center gap-3 rounded-full bg-[#FFC475] px-8 font-[family-name:var(--font-questrial)] text-base font-semibold tracking-widest uppercase text-black shadow-lg transition-all duration-300 hover:bg-[#ffba61] hover:shadow-xl"
+                className="flex h-[52px] sm:h-[58px] flex-1 items-center justify-center gap-2.5 sm:gap-3 rounded-full bg-[#FFC475] px-6 sm:px-8 font-[family-name:var(--font-questrial)] text-sm sm:text-base font-semibold tracking-widest uppercase text-black shadow-lg transition-all duration-300 hover:bg-[#ffba61] hover:shadow-xl"
               >
-                <ShoppingBag className="size-5" />
+                <ShoppingBag className="size-4 sm:size-5" />
                 <span>Add to Shopping Bag</span>
               </motion.button>
 
@@ -378,7 +378,7 @@ export function ProductDetailView({ productId }: { productId: string }) {
                 onClick={handleInstantCheckout}
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                className="flex h-[58px] items-center justify-center rounded-full bg-black px-7 font-[family-name:var(--font-questrial)] text-sm font-semibold tracking-widest uppercase text-white transition-all hover:bg-neutral-800"
+                className="flex h-[52px] sm:h-[58px] items-center justify-center rounded-full bg-black px-6 sm:px-7 font-[family-name:var(--font-questrial)] text-xs sm:text-sm font-semibold tracking-widest uppercase text-white transition-all hover:bg-neutral-800"
               >
                 Instant Buy
               </motion.button>

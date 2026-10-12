@@ -83,25 +83,25 @@ export function Contact() {
         <div className="absolute inset-0 bg-white/35" />
       </div>
 
-      <div className="relative z-10 grid gap-10 px-6 py-16 md:px-10 md:py-20 lg:grid-cols-[1fr_640px] lg:gap-12 lg:px-[126px] lg:py-20">
-        <div>
+      <div className="relative z-10 grid gap-10 px-4 sm:px-8 md:px-12 lg:px-14 xl:px-20 2xl:px-[126px] py-12 sm:py-16 md:py-20 lg:grid-cols-12 lg:gap-10 xl:gap-14 items-center">
+        <div className="lg:col-span-6 xl:col-span-7">
           <SectionLabel
             label="CONTACT US"
-            className="mb-6 max-w-[900px]"
+            className="mb-4 sm:mb-6 max-w-[900px]"
             lineClassName="bg-black/14"
             dotClassName="bg-black"
           />
-          <h2 className="max-w-[709px] font-[family-name:var(--font-display)] text-[40px] leading-[0.95] text-black md:text-[60px] lg:text-[80px] lg:leading-[76px]">
+          <h2 className="max-w-[709px] font-[family-name:var(--font-display)] text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[80px] font-normal leading-[0.96] text-black">
             Let&apos;s Talk About{" "}
             <span className="italic text-[#C69B61]">Your Beauty Needs</span>
           </h2>
-          <p className="mt-6 max-w-[701px] font-[family-name:var(--font-questrial)] text-base leading-[1.266] tracking-[0.07em] text-black/50 md:text-2xl">
+          <p className="mt-4 sm:mt-6 max-w-[701px] font-[family-name:var(--font-questrial)] text-xs sm:text-base md:text-lg lg:text-xl xl:text-2xl leading-relaxed tracking-[0.05em] text-black/50">
             Have a question about our skincare, beauty or fragrance products?
             We&apos;re here to help. Reach out to our team and we&apos;ll get
             back to you as soon as possible.
           </p>
 
-          <ul className="mt-10 space-y-6">
+          <ul className="mt-8 sm:mt-10 space-y-4 sm:space-y-6">
             <ContactRow
               icon={Mail}
               label="EMAIL US"
@@ -121,7 +121,7 @@ export function Contact() {
             />
           </ul>
 
-          <div className="mt-10 flex items-center gap-5 text-black">
+          <div className="mt-8 sm:mt-10 flex items-center gap-4 sm:gap-5 text-black">
             {socialIcons.map((social) => (
               <motion.a
                 key={social.label}
@@ -142,7 +142,7 @@ export function Contact() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.6 }}
-          className="contact-form rounded-[26px] bg-white/46 p-4 backdrop-blur-md md:p-8"
+          className="contact-form rounded-[24px] sm:rounded-[26px] bg-white/55 p-5 sm:p-7 md:p-8 backdrop-blur-md shadow-lg lg:col-span-6 xl:col-span-5"
         >
           <FormField
             label="Full Name *"
@@ -164,22 +164,22 @@ export function Contact() {
             <span className="sr-only">Message</span>
             <textarea
               required
-              rows={6}
+              rows={5}
               value={form.message}
               onChange={(e) =>
                 setForm((prev) => ({ ...prev, message: e.target.value }))
               }
               placeholder="MESSAGE *"
-              className="w-full resize-none rounded-lg bg-white px-5 py-5 font-[family-name:var(--font-questrial)] text-sm uppercase tracking-[0.11em] text-black placeholder:text-black/19 md:text-xl"
+              className="w-full resize-none rounded-lg bg-white px-4 sm:px-5 py-3 sm:py-4 font-[family-name:var(--font-questrial)] text-xs sm:text-sm md:text-base uppercase tracking-[0.08em] text-black placeholder:text-black/25 outline-none focus:ring-1 focus:ring-[#C69B61]"
             />
           </label>
           <motion.button
             type="submit"
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
-            className="flex h-[52px] w-full items-center justify-center gap-3 rounded-full bg-black font-[family-name:var(--font-questrial)] text-lg uppercase tracking-wide text-white"
+            className="flex h-12 sm:h-[52px] w-full items-center justify-center gap-3 rounded-full bg-black font-[family-name:var(--font-questrial)] text-sm sm:text-base md:text-lg uppercase tracking-wide text-white transition-colors hover:bg-neutral-800"
           >
-            Send Enquiry
+            <span>Send Enquiry</span>
             <svg width="16" height="12" viewBox="0 0 16 12" fill="none" aria-hidden>
               <path
                 d="M1 6H14M14 6L10 2M14 6L10 10"
@@ -255,7 +255,7 @@ function FormField({
         value={value}
         onChange={(e) => onChange(e.target.value)}
         placeholder={label}
-        className="h-[69px] w-full rounded-lg bg-white px-5 font-[family-name:var(--font-questrial)] text-sm uppercase tracking-[0.11em] text-black placeholder:text-black/19 md:text-xl"
+        className="h-[52px] sm:h-[60px] md:h-[64px] w-full rounded-lg bg-white px-4 sm:px-5 font-[family-name:var(--font-questrial)] text-xs sm:text-sm md:text-base uppercase tracking-[0.08em] text-black placeholder:text-black/25 outline-none focus:ring-1 focus:ring-[#C69B61]"
       />
     </label>
   );

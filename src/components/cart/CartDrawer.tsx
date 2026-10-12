@@ -84,13 +84,13 @@ export function CartDrawer() {
             aria-label="Shopping Bag"
           >
             {/* Header */}
-            <div className="flex items-center justify-between border-b border-black/10 px-6 py-5 sm:px-8">
-              <div className="flex items-center gap-3">
-                <ShoppingBag className="size-5 text-[#C69B61]" />
-                <h2 className="font-[family-name:var(--font-display)] text-2xl font-normal tracking-wide text-black sm:text-3xl">
+            <div className="flex items-center justify-between border-b border-black/10 px-4 py-4 sm:px-8 sm:py-5">
+              <div className="flex items-center gap-2.5 sm:gap-3">
+                <ShoppingBag className="size-4 sm:size-5 text-[#C69B61]" />
+                <h2 className="font-[family-name:var(--font-display)] text-xl font-normal tracking-wide text-black sm:text-2xl md:text-3xl">
                   Shopping <span className="italic text-[#C69B61]">Bag</span>
                 </h2>
-                <span className="flex size-6 items-center justify-center rounded-full bg-[#FFC475] font-[family-name:var(--font-questrial)] text-xs font-semibold text-black">
+                <span className="flex size-5 sm:size-6 items-center justify-center rounded-full bg-[#FFC475] font-[family-name:var(--font-questrial)] text-[10px] sm:text-xs font-semibold text-black">
                   {totalItems}
                 </span>
               </div>
@@ -100,15 +100,15 @@ export function CartDrawer() {
                 onClick={closeCart}
                 whileHover={{ rotate: 90, scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
-                className="flex size-10 items-center justify-center rounded-full border border-black/10 bg-white/80 text-black transition-colors hover:bg-black hover:text-white"
+                className="flex size-9 sm:size-10 items-center justify-center rounded-full border border-black/10 bg-white/80 text-black transition-colors hover:bg-black hover:text-white"
                 aria-label="Close Shopping Bag"
               >
-                <X className="size-5" />
+                <X className="size-4 sm:size-5" />
               </motion.button>
             </div>
 
             {/* Free Shipping Tier Banner */}
-            <div className="border-b border-black/8 bg-[#F3EBE1] px-6 py-3.5 sm:px-8">
+            <div className="border-b border-black/8 bg-[#F3EBE1] px-4 py-3 sm:px-8 sm:py-3.5">
               <div className="flex items-center justify-between text-xs tracking-wider text-black/75 sm:text-sm">
                 <span className="flex items-center gap-1.5 font-medium">
                   <Truck className="size-4 text-[#C69B61]" />
@@ -283,7 +283,7 @@ export function CartDrawer() {
 
             {/* Footer Summary & Checkout */}
             {items.length > 0 && (
-              <div className="border-t border-black/10 bg-[#F4EDE4] p-6 sm:px-8">
+              <div className="border-t border-black/10 bg-[#F4EDE4] p-4 sm:p-6 sm:px-8">
                 <div className="space-y-2 text-sm">
                   <div className="flex justify-between font-[family-name:var(--font-questrial)] text-black/70">
                     <span>Subtotal</span>
@@ -303,20 +303,20 @@ export function CartDrawer() {
                       )}
                     </span>
                   </div>
-                  <div className="flex items-baseline justify-between border-t border-black/10 pt-2 font-[family-name:var(--font-display)] text-xl text-black">
+                  <div className="flex items-baseline justify-between border-t border-black/10 pt-2 font-[family-name:var(--font-display)] text-lg sm:text-xl text-black">
                     <span>Estimated Total</span>
-                    <span className="text-2xl font-normal text-black">
+                    <span className="text-xl sm:text-2xl font-normal text-black">
                       ${(subtotal + shippingCost).toFixed(2)}
                     </span>
                   </div>
                 </div>
 
                 {/* Primary CTA Checkout */}
-                <div className="mt-5 space-y-2.5">
+                <div className="mt-4 sm:mt-5 space-y-2">
                   <Link
                     href="/checkout"
                     onClick={closeCart}
-                    className="flex w-full items-center justify-center gap-3 rounded-full bg-black py-4 font-[family-name:var(--font-questrial)] text-base font-medium tracking-widest uppercase text-white shadow-lg transition-all duration-300 hover:bg-[#1f1a14] hover:shadow-xl hover:ring-2 hover:ring-[#FFC475]"
+                    className="flex w-full items-center justify-center gap-3 rounded-full bg-black py-3.5 sm:py-4 font-[family-name:var(--font-questrial)] text-sm sm:text-base font-medium tracking-widest uppercase text-white shadow-lg transition-all duration-300 hover:bg-[#1f1a14] hover:shadow-xl hover:ring-2 hover:ring-[#FFC475]"
                   >
                     <span>Proceed to Checkout</span>
                     <ArrowRight className="size-4 text-[#FFC475]" />
